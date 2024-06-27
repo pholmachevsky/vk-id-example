@@ -5,8 +5,10 @@
     <meta charset="UTF-8" />
     <script>
       function openNewVK() {
+        const origin = location.protocol + '//' + location.hostname;
+        
         const url =
-          'https://id.vk.com/authorize?redirect_uri=https%3A%2F%2Fskyeng.ru%2F&code_challenge=1fPGgPl4e8icwRbN00fcrOk262z7alp1IEAKjq3NOUc&code_challenge_method=s256&state=263cf5f4dd4dbf01ae1496592360fbe2&scope=phone,email&response_type=code&client_id=51954182';
+          `https://id.vk.com/authorize?redirect_uri=https%3A%2F%2Fskyeng.ru%2F&code_challenge=1fPGgPl4e8icwRbN00fcrOk262z7alp1IEAKjq3NOUc&code_challenge_method=s256&state=263cf5f4dd4dbf01ae1496592360fbe2&scope=phone,email&response_type=code&client_id=51954182&origin=${origin}`;
         
         window.open(url, '_blank', `width=400,height=400`);
       }
